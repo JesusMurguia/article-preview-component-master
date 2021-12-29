@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+*{  
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    background-color: var(--light-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.container{
+    background: white;
+    border-radius: 1rem;
+
+    width: 25rem;
+    height: auto;
+    padding-bottom: 1.5rem;
+}
+
+#drawer-img-col{
+    padding: 0!important;
+}
+
+.drawer-img{
+    border-radius: 1rem 1rem 0 0;
+}
+
+#content-col{
+    padding: 2.5rem 2.5rem 0 2.5rem !important;
+}
+
+
+.title{
+    font-size:1.25rem;
+    line-height: 1.5;
+    font-weight: 800;
+    color: var(--very-dark-grayish-blue);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.subtitle{
+    color: var(--desaturated-dark-blue);
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.michelle-avatar{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    content: url("../images/avatar-michelle.jpg");
+}
+
+.share-button{
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: var(--very-dark-grayish-blue);
+    -webkit-mask: url("../images/icon-share.svg") no-repeat center;
+    mask: url("../images/icon-share.svg") no-repeat center;
+    object-fit: scale-down;
+    cursor: pointer;
+}
+
+.share-background{
+    display: flex;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: var(--light-grayish-blue);
+    border-radius: 50%;  
+}
+
+.author-info{
+    padding: 0 1rem 0 1rem;
+}
+
+.name{
+    color: var(--very-dark-grayish-blue);
+    font-weight: 800;
+}
+
+.date{
+    color: var(--grayish-blue);
+}
+
+.share-button:hover{
+    background-color: var(--light-grayish-blue);
+}
+
+.share-background:hover{
+    background: var(--very-dark-grayish-blue);
+}
+
+
+.popover{
+    background: var(--very-dark-grayish-blue);
+    border-radius: 0.5rem;
+}
+
+.popover-body{
+    color: var(--light-grayish-blue);
+}
+
+.popover-arrow::after{
+    border-top-color: var(--very-dark-grayish-blue)!important;
+}
+
+@media screen and (min-width: 992px){
+    .container{
+        width: 786px;
+        height: 280px;
+    }
+
+    .drawer-img{
+        border-radius: 1rem 0 0 1rem;
+        height: 280px;
+        
+        object-fit: cover
+    }
+
+    .title{
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle{
+        font-size: 1.08rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #content-col{
+        padding: 2rem 3rem 0 3rem !important;
+    }
+    .author-info{
+        padding: 0;
+    }
+}
+    
+
