@@ -16,35 +16,58 @@
   <title>Frontend Mentor | Article preview component</title>
 </head>
 <body>
-  
  <main class="container">
     <div class="row">
         <div id="drawer-img-col" class="col-lg-5">
           <img src="./images/drawers.jpg" alt="Drawers" class="img-fluid drawer-img">
         </div>
         <div id="content-col" class="col-lg-7">
-          <h1 class="title">Shift the overall look and feel by adding these wonderful 
-            touches to furniture in your home</h1>
-          <p class="subtitle">
-            Ever been in a room and felt like something was missing? Perhaps 
-            it felt slightly bare and uninviting. I’ve got some simple tips 
-            to help you make any room feel complete.
-          </p>
-          <div class="row author-info">
-            <div class="col-2 d-flex justify-content-center">
-              <div class="michelle-avatar"></div>
+          <div class="row">
+            <div class="col-12">
+              <h1 class="title">Shift the overall look and feel by adding these wonderful 
+                touches to furniture in your home</h1>
             </div>
-            <div class="col-8 author">
-              <div class="name">Michelle Appleton</div>
-              <div class="date">28 Jun 2020</div>
+            <div class="col-12">
+              <p class="subtitle">
+                Ever been in a room and felt like something was missing? Perhaps 
+                it felt slightly bare and uninviting. I’ve got some simple tips 
+                to help you make any room feel complete.
+              </p>
             </div>
-            <div class="col-2 share-background">
-              <button id="pop" type="button" class="share-button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
-                <a href="#" id="meddelanden" data-title="Meddelanden" data-toggle="clickover" 
-                data-placement="right"><i class="icon-globe"></i></a>
-              </button>
+            <!-- normal -->
+            <div id="normal-author-info" class="col-12 author-info">
+              <div class="row ">
+                <div class="col-2 d-flex justify-content-center">
+                  <div class="michelle-avatar"></div>
+                </div>
+                <div class="col-8 author">
+                  <div class="name">Michelle Appleton</div>
+                  <div class="date">28 Jun 2020</div>
+                </div>
+                <div class="col-2 share-background">
+                  <button  type="button" class="share-button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+                    <a href="#"  data-title="Meddelanden" data-toggle="clickover" 
+                    data-placement="right"><i class="icon-globe"></i></a>
+                  </button>
+                </div>
+                <div id="mobile-share-button" class="share-button-mobile"></div>
+              </div>
             </div>
-          </div>
+            <!-- mobile active state -->
+            <div id="active-author-info" class="col-12 author-info-mobile-active-state">
+              <div class="row share-row">
+                <div class="col-2 share-text">SHARE</div>
+                <div class="col-7 d-flex">
+                  <div class="facebook-button"></div>
+                  <div class="twitter-button"></div>
+                  <div class="pinterest-button"></div>
+                </div>
+                <div class="col-3 share-background d-flex">
+                  <button id="mobile-share-button-active" type="button" class="share-button d-flex">
+                  </button>
+                </div>
+              </div>
+            </div>
         </div>
     </div>
   </main>

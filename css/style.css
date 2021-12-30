@@ -21,10 +21,8 @@ body{
 .container{
     background: white;
     border-radius: 1rem;
-
-    width: 25rem;
+    max-width: 25rem;
     height: auto;
-    padding-bottom: 1.5rem;
 }
 
 #drawer-img-col{
@@ -35,9 +33,6 @@ body{
     border-radius: 1rem 1rem 0 0;
 }
 
-#content-col{
-    padding: 2.5rem 2.5rem 0 2.5rem !important;
-}
 
 
 .title{
@@ -46,14 +41,16 @@ body{
     font-weight: 800;
     color: var(--very-dark-grayish-blue);
     text-align: left;
+    padding: 1.5rem 1.5rem  0 1.5rem ;
     margin-bottom: 1rem;
 }
 
 .subtitle{
     color: var(--desaturated-dark-blue);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.02rem;
     text-align: left;
+    padding: 0 1.5rem;
     margin-bottom: 3rem;
 }
 
@@ -65,21 +62,30 @@ body{
 }
 
 .share-button{
-    width: 2.8rem;
-    height: 2.8rem;
-    background-color: var(--very-dark-grayish-blue);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--light-grayish-blue);
     -webkit-mask: url("../images/icon-share.svg") no-repeat center;
     mask: url("../images/icon-share.svg") no-repeat center;
     object-fit: scale-down;
     cursor: pointer;
+    display: none;
 }
 
 .share-background{
     display: flex;
-    width: 2.8rem;
-    height: 2.8rem;
-    background: var(--light-grayish-blue);
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--desaturated-dark-blue);
     border-radius: 50%;  
+    display: none;
+    justify-content: space-evenly;
+    margin-top: 4px;
+    margin-left: -29px;
+}
+
+.share-row{
+    justify-content: space-evenly;
 }
 
 .author-info{
@@ -117,15 +123,81 @@ body{
     border-top-color: var(--very-dark-grayish-blue)!important;
 }
 
+.author-info{
+    padding: 0 2rem 2rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.facebook-button{
+    width: 3rem;
+    height: 3rem;
+    content: url("../images/icon-facebook.svg");
+    object-fit: scale-down;
+    cursor: pointer;
+}
+
+.twitter-button{
+    width: 3rem;
+    height: 3rem;
+    content: url("../images/icon-twitter.svg");
+    object-fit: scale-down;
+    cursor: pointer;
+}
+
+.pinterest-button{
+    width: 3rem;
+    height: 3rem;
+    content: url("../images/icon-pinterest.svg");
+    object-fit: scale-down;
+    cursor: pointer;
+}
+
+.share-text{
+    display: flex;
+    color: var(--grayish-blue);
+    align-items: center;
+   
+}
+.popover{
+    width: fit-content;
+}
+
+.share-button-mobile{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--light-grayish-blue);
+    content: url("../images/icon-share.svg");
+    cursor: pointer;
+    object-fit: scale-down;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.author-info-mobile-active-state{
+    background-color: var(--very-dark-grayish-blue);
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius:  0 0 1rem 1rem;
+    display: none;
+}
+
+.author-info-desktop-active-state{
+    background-color: var(--very-dark-grayish-blue);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 @media screen and (min-width: 992px){
     .container{
-        width: 786px;
-        height: 280px;
+        width: 100%;
+        height: auto;
+        padding-bottom: 0;
+        max-width: 850px;
     }
 
     .drawer-img{
         border-radius: 1rem 0 0 1rem;
-        height: 280px;
+        height: auto;
         
         object-fit: cover
     }
@@ -140,11 +212,39 @@ body{
         margin-bottom: 1.5rem;
     }
 
-    #content-col{
-        padding: 2rem 3rem 0 3rem !important;
+    .author-info{
+        padding: 0 2rem 0rem 2rem;
+    }
+
+    .share-background{
+        display: flex;
+    }
+
+    .share-button{
+        display: flex;
+    }
+
+    .share-button-mobile{
+        display: none;
+    }
+
+    .author-info-mobile-active-state{
+        display: none!important;
     }
     .author-info{
-        padding: 0;
+        display: block!important;
+    }
+
+    .share-button{
+        background-color: var(--very-dark-grayish-blue);
+    }
+    
+    .share-background{
+        background: var(--light-grayish-blue);
+    }
+
+    .title{
+        padding: 1.5rem 1.5rem  0 1.5rem ;
     }
 }
     
